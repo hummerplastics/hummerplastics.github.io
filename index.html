@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <title>HUMMER PLASTICS</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-Xqcy5ttufkC3rBa8EdiAyA1VgOGrmel2Y+wxm4K3kI3fcjTWlDWrlnxyD6hOi3PF" crossorigin="anonymous">
   </head>
-  <body ng-app="myApp">
+  <body ng-controller="mainController">
 
   <p><a href="/">Main</a></p>
   <a href="/tipo">Tipo</a>
@@ -19,16 +19,23 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
   <script>
+
   var app = angular.module("myApp", ["ngRoute"]);
   app.config(function($routeProvider) {
       $routeProvider
       .when("/", {
-          templateUrl : "https://raw.githubusercontent.com/hummerplastics/hummerplastics.github.io/master/parts/main.html"
+          templateUrl : "https://raw.githubusercontent.com/hummerplastics/hummerplastics.github.io/master/parts/main.html",
+          controller  : 'mainController'
       })
       .when("/tipo", {
           templateUrl : "https://raw.githubusercontent.com/hummerplastics/hummerplastics.github.io/master/parts/tipo.html"
       });
   });
+
+  app.controller('mainController', function($scope) {
+        $scope.message = 'Everyone come and see how good I look!';
+  });
+  
   </script>
   </body>
 </html>
