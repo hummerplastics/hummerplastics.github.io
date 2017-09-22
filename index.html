@@ -7,7 +7,7 @@
   </head>
   <body>
 
-  <p><a href="#">Main</a></p>
+  <p><a href="/">Main</a></p>
   <a href="#tipo">Tipo</a>
 
   <div ng-view></div>
@@ -22,17 +22,17 @@
   app.config(function($routeProvider) {
       $routeProvider
       .when("/", {
-          templateUrl : "https://raw.githubusercontent.com/hummerplastics/hummerplastics.github.io/master/parts/main.html",
+          templateUrl : "/parts/main.html",
           controller  : 'mainController'
       })
       .when("/tipo", {
-          templateUrl : "https://raw.githubusercontent.com/hummerplastics/hummerplastics.github.io/master/parts/tipo.html"
+          templateUrl : "/parts/tipo.html"
       });
   });
   app.controller('mainController', function($scope) {
         $scope.message = 'Everyone come and see how good I look!';
   });
-  
+
   </script>
   </body>
 </html>
