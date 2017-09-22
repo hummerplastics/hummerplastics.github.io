@@ -2,15 +2,9 @@ var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "parts/main.html"
+        templateUrl : "https://raw.githubusercontent.com/hummerplastics/hummerplastics.github.io/master/parts/main.html"
     })
     .when("/tipo", {
-        templateUrl : "parts/tipo.html"
-    })
-    .when("/green", {
-        templateUrl : "parts/green.htm"
-    })
-    .when("/blue", {
-        templateUrl : "parts/blue.htm"
+        templateUrl : "https://raw.githubusercontent.com/hummerplastics/hummerplastics.github.io/master/parts/tipo.html"
     });
 });
